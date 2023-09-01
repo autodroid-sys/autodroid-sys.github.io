@@ -200,7 +200,7 @@
 
 <!-- Video demo-->
 <!-- <section class="hero is-small is-light"> -->
-<section class="hero is-small">
+<section class="hero is-small" id="videoSection">
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
@@ -209,10 +209,10 @@
         <div class="column is-four-fifths">
           <div class="publication-video">
             <!-- Video demo embed code here -->
-              <video class="video" controls="" autoplay="" playsinline="" muted="" loop="" style="height: 500px;">
+              <video class="video" controls="" autoplay="" playsinline="" muted="" loop="" style="">
                 <source src="./static/videos/Send message 4x.mp4" type="video/mp4" >
               </video>
-              <video class="video" controls="" autoplay="" playsinline="" muted="" loop="" style="height: 500px; margin-left: 50px">
+              <video class="video" controls="" autoplay="" playsinline="" muted="" loop="" style="margin-left: 50px">
                 <source src="./static/videos/Create contact 8x.mp4" type="video/mp4">
               </video>
           </div>
@@ -221,8 +221,29 @@
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End Video demo -->
 
+<!-- Adjust the height of the video demo to fit the component block. -->
+<script>
+  // Get the <section> element and <video> elements
+  const section = document.getElementById('videoSection');
+  const videos = document.querySelectorAll('.video');
+
+  // Listen for window resize events to dynamically adjust video height
+  function adjustVideoHeight() {
+    const sectionHeight = section.clientHeight; // Get the height of the <section> element
+
+    // Set the video height to match the <section> height
+    videos.forEach(video => {
+      video.style.height = sectionHeight * 0.8 + 'px';
+    });
+  }
+
+  // Adjust video height on page load and window resize
+  window.addEventListener('load', adjustVideoHeight);
+  window.addEventListener('resize', adjustVideoHeight);
+</script>
+<!-- End Adjust -->
 
 <!-- An example of AutoDroid -->
 <!-- <section class="hero is-small is-light">
