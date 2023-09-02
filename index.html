@@ -205,18 +205,21 @@
     <div class="container">
       <!-- Paper video. -->
       <h2 class="title is-3">Video Demo</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <div class="publication-video">
+      <div class="columns is-centered has-text-centered"  style="width: 110%;">
+        <div class="column is-four-fifths"  style="width: 100%;">
+          <div class="publication-video"  style="width: 100%;">
             <!-- Video demo embed code here -->
-              <video class="video" controls="" autoplay="" playsinline="" muted="" loop="" style="">
+              <video class="video" controls="" autoplay="" playsinline="" muted="" loop="" style="margin-left: -70px">
                 <source src="./static/videos/Send message 4x.mp4" type="video/mp4" >
               </video>
-              <video class="video" controls="" autoplay="" playsinline="" muted="" loop="" style="margin-left: 50px">
+              <video class="video" controls="" autoplay="" playsinline="" muted="" loop="" style="margin-left: 10px">
                 <source src="./static/videos/Create contact 8x.mp4" type="video/mp4">
               </video>
-              <video class="video" controls="" autoplay="" playsinline="" muted="" loop="" style="margin-left: 50px">
+              <video class="video" controls="" autoplay="" playsinline="" muted="" loop="" style="margin-left: 10px">
                 <source src="./static/videos/Create event in calendar 5x.mp4" type="video/mp4">
+              </video>
+              <video class="video" controls="" autoplay="" playsinline="" muted="" loop="" style="margin-left: 10px">
+                <source src="./static/videos/Delete photo 4x.mp4" type="video/mp4">
               </video>
           </div>
         </div>
@@ -238,7 +241,7 @@
 
     // Set the video height to match the <section> height
     videos.forEach(video => {
-      video.style.height = sectionHeight * 0.8 + 'px';
+      video.style.height = sectionHeight * 0.7 + 'px';
     });
   }
 
